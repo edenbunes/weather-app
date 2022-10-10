@@ -1,0 +1,94 @@
+.decorating {
+  margin: auto;
+  font-family: "Quicksand", sans-serif;
+  border: 1px solid #d4dde9;
+  border-radius: 5px;
+  padding: 15px;
+  max-width: 473px;
+  margin: 20px auto;
+}
+.city-input {
+  position: relative;
+  bottom: 5px;
+  right: 2px;
+  border-radius: 5px;
+  padding: 6px 9px;
+  border: 1px solid #ced4da;
+  background: none;
+}
+.submiting {
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  padding: 5px 9px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #6d7074;
+}
+.current {
+  position: relative;
+  bottom: 42px;
+  right: -270px;
+  padding: 3px 2px;
+  border: 3px solid #aeb2b0;
+  border-radius: 5px;
+  color: #6d7074;
+}
+.card-title {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+  color: rgb(66, 65, 65);
+  padding: 20px;
+  text-transform: capitalize;
+}
+.degrees-number {
+  font-size: 55px;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(66, 65, 65);
+  line-height: 40px;
+}
+.day-hour {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(66, 65, 65);
+  line-height: 10px;
+}
+.degrees-f-c {
+  position: relative;
+  bottom: 64px;
+  right: -256px;
+  font-size: 22px;
+}
+.another-condition {
+  padding-top: 56px;
+  padding-bottom: 22px;
+  font-size: 17px;
+}
+
+.degrees-days {
+  background-color: rgb(226, 226, 226);
+  font-size: 30px;
+  padding: 12px 12px;
+  font-weight: 500;
+  color: rgb(66, 65, 65);
+}
+.sun-icon {
+  font-size: 50px;
+  padding: 25px 0px;
+  color: orange;
+}
+.degrees {
+  font-size: 19px;
+}
+.sun-icon-need {
+  font-size: 50px;
+  padding: 25px 0px;
+  color: orange;
+  position: relative;
+  bottom: 0px;
+  right: -8px;
+}
