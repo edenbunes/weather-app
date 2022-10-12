@@ -26,7 +26,7 @@
   font-weight: bold;
   color: #6d7074;
 }
-.current {
+.current-button {
   position: relative;
   bottom: 42px;
   right: -270px;
@@ -35,7 +35,7 @@
   border-radius: 5px;
   color: #6d7074;
 }
-.card-title {
+.city-name {
   font-size: 50px;
   text-align: center;
   font-weight: 700;
@@ -43,7 +43,7 @@
   padding: 20px;
   text-transform: capitalize;
 }
-.degrees-number {
+.number-degrees {
   font-size: 55px;
   text-align: center;
   font-weight: 500;

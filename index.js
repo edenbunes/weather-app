@@ -32,8 +32,8 @@ let dayAndHour = document.querySelector("#day-hour");
 dayAndHour.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showCityTemp(response) {
-  document.querySelector("#card-title").innerHTML = response.data.name;
-  document.querySelector("#degrees-number").innerHTML = Math.round(
+  document.querySelector("#city-name").innerHTML = response.data.name;
+  document.querySelector("#number-degrees").innerHTML = Math.round(
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = Math.round(
@@ -70,7 +70,7 @@ function activateCurrentButton(event) {
   }
   navigator.geolocation.getCurrentPosition(getPosition);
 }
-let buttunCurrentTemp = document.querySelector("#current");
-buttunCurrentTemp.addEventListener("click", activateCurrentButton);
+let CurrentButtunTemp = document.querySelector("#current-button");
+CurrentButtunTemp.addEventListener("click", activateCurrentButton);
 
 activateTheCity("tel aviv");
