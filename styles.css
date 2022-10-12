@@ -92,6 +92,7 @@
   bottom: 0px;
   right: -8px;
 }
-.links {
+.githubLink {
+  display: block;
   text-align: center;
 }
