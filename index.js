@@ -43,7 +43,7 @@ function showCityTemp(response) {
     response.data.wind.speed * 3.6
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
 }
 
 function activateTheCity(city) {
