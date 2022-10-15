@@ -1,5 +1,4 @@
 let time = new Date();
-
 let days = [
   "Sunday",
   "Monday",
@@ -10,7 +9,7 @@ let days = [
   "Saturday",
 ];
 let day = days[time.getDay()];
-function getZero() {
+function displayMinutes() {
   let minutsPlusZero = time.getMinutes();
   if (minutsPlusZero < 10) {
     return `0` + minutsPlusZero;
@@ -18,8 +17,8 @@ function getZero() {
     return minutsPlusZero;
   }
 }
-let minutes = getZero();
-function getZeroForHours() {
+let minutes = displayMinutes();
+function displayHours() {
   let HoursPlusZero = time.getHours();
   if (HoursPlusZero < 10) {
     return `0` + HoursPlusZero;
@@ -27,9 +26,8 @@ function getZeroForHours() {
     return HoursPlusZero;
   }
 }
-let hours = getZeroForHours();
-let dayAndHour = document.querySelector("#day-hour");
-dayAndHour.innerHTML = `${day} ${hours}:${minutes}`;
+let hours = displayHours();
+document.querySelector("#day-hour").innerHTML = `${day} ${hours}:${minutes}`;
 
 function showCityTemp(response) {
   document.querySelector("#city-name").innerHTML = response.data.name;
