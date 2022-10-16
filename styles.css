@@ -52,10 +52,12 @@
 }
 .day-hour {
   font-size: 35px;
-  text-align: center;
   font-weight: 400;
   color: rgb(66, 65, 65);
   line-height: 10px;
+}
+.time {
+  text-align: center;
 }
 .degrees-f-c {
   position: relative;
