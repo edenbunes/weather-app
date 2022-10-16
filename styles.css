@@ -53,14 +53,13 @@
   line-height: 40px;
   margin: 0px 222px 0px 10px;
 }
-
 .time {
   text-align: center;
   font-size: 15px;
   font-weight: 400;
   color: rgb(66, 65, 65);
-  line-height: 10px;
   margin: 0px 170px 0px 10px;
+  line-height: 10px;
 }
 .degrees-f-c {
   position: relative;
@@ -73,6 +72,7 @@
   padding-bottom: 22px;
   font-size: 17px;
   text-align: center;
+  line-height: 15px;
 }
 .description::first-letter {
   text-transform: capitalize;
