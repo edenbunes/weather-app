@@ -67,6 +67,10 @@
   padding-top: 56px;
   padding-bottom: 22px;
   font-size: 17px;
+  text-align: center;
+}
+.description::first-letter {
+  text-transform: capitalize;
 }
 .temp-by-days {
   background-color: rgb(226, 226, 226);
