@@ -1,78 +1,85 @@
+img {
+  display: block;
+  margin: 10px auto -6px auto;
+
+  width: 60%;
+}
+ul {
+  list-style-type: none;
+}
 .decorating {
-  margin: auto;
   font-family: "Quicksand", sans-serif;
-  border: 1px solid #d4dde9;
+  border: 5px solid rgb(46, 47, 48, 0.5);
   border-radius: 5px;
-  padding: 15px;
-  max-width: 473px;
+  padding: 20px;
+  max-width: 500px;
   margin: 20px auto;
 }
 .city-input {
-  position: relative;
-  bottom: 5px;
-  right: 2px;
   border-radius: 5px;
-  padding: 6px 9px;
   border: 1px solid #ced4da;
   background: none;
 }
 .submiting {
-  position: relative;
-  bottom: 5px;
-  right: 5px;
-  padding: 5px 9px;
   border: 1px solid #ced4da;
   border-radius: 5px;
   font-weight: bold;
   color: #6d7074;
+  padding: 6px;
 }
 .current-button {
-  position: relative;
-  bottom: 42px;
-  right: -270px;
-  padding: 3px 2px;
   border: 3px solid #aeb2b0;
   border-radius: 5px;
   color: #6d7074;
+  padding: 4px;
 }
-
 .city-name {
   font-size: 50px;
-  text-align: center;
   font-weight: 700;
   color: rgb(66, 65, 65);
-  padding: 20px;
   text-transform: capitalize;
-  margin: 0px 170px 0px 10px;
+  margin: 50px 0 10px 13px;
+}
+.temp-area {
+  border: solid;
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
 }
 .number-degrees {
   font-size: 55px;
-  text-align: center;
   font-weight: 500;
   color: rgb(66, 65, 65);
-  line-height: 40px;
-  margin: 0px 222px 0px 10px;
+  margin: 20px 180px 0px 10px;
 }
 .time {
-  text-align: center;
   font-size: 15px;
   font-weight: 400;
   color: rgb(66, 65, 65);
-  margin: 0px 170px 0px 10px;
-  line-height: 10px;
+  margin: 5px 230px 0px 4px;
+  line-height: 15px;
+}
+.description {
+  font-size: 17px;
+  text-align: center;
 }
 .degrees-f-c {
   position: relative;
-  bottom: 47px;
-  right: -156px;
+  bottom: 68px;
+  right: -76px;
   font-size: 22px;
 }
+.degrees-celsius {
+  text-decoration: none;
+}
+.degrees-fahrenheit {
+  text-decoration: none;
+}
 .another-condition {
-  padding-top: 56px;
   padding-bottom: 22px;
+  padding-left: 10px;
+  margin: -30px 0px 29px 6px;
   font-size: 17px;
-  text-align: center;
-  line-height: 15px;
+  line-height: 25px;
 }
 .description::first-letter {
   text-transform: capitalize;
