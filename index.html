@@ -53,7 +53,7 @@
             </div>
           </div>
         </form>
-        <div class="time">
+        <div class="time" id="time">
           Last checked: <span class="day-hour" id="day-hour"></span>
         </div>
         <h1 class="city-name" id="city-name"></h1>
@@ -64,15 +64,14 @@
               <div class="description" id="description"></div>
             </div>
             <div class="col-6">
-              <div class="number-degrees" id="number-degrees">
-                <strong></strong>
-              </div>
-              <div class="degrees-f-c">
+              <strong class="number-degrees" id="number-degrees"></strong
+              ><span class="degrees-plus-farenheit">
                 <a href="#" class="degrees-celsius" id="degrees-celsius">℃</a>
                 <a href="#" class="degrees-fahrenheit" id="degrees-fahrenheit"
                   >℉</a
-                >
-              </div>
+                ></span
+              >
+
               <ul class="another-condition">
                 <li>Humidity: <span id="humidity"></span>%</li>
                 <li>Wind: <span id="wind"></span> km/h</li>
