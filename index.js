@@ -28,9 +28,10 @@ function getTime(timestamp) {
     }
   }
   let hours = displayHours();
-  return `${day} ${hours}:${minutes}`;
+  document.querySelector("#day-hour").innerHTML = `${day} ${hours}:${minutes}`;
 }
 function showCityTemp(response) {
+  console.log(response.data);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -49,9 +50,7 @@ function showCityTemp(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-  document.querySelector("#day-hour").innerHTML = getTime(
-    response.data.dt * 1000
-  );
+  getTime(response.data.dt * 1000);
 }
 function activateTheCity(city) {
   let apiKey = "33fd04d85cdb641fd1bc55ca0162ba48";
