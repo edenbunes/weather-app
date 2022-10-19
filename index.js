@@ -1,7 +1,6 @@
 let time = new Date();
 let days = [
   "Sunday",
-  "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
