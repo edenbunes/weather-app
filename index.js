@@ -1,33 +1,35 @@
-let time = new Date();
-let days = [
-  "Sunday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[time.getDay()];
-function displayMinutes() {
-  let minutsPlusZero = time.getMinutes();
-  if (minutsPlusZero < 10) {
-    return `0` + minutsPlusZero;
-  } else {
-    return minutsPlusZero;
+function getTime(timestamp) {
+  let time = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[time.getDay()];
+  function displayMinutes() {
+    let minutsPlusZero = time.getMinutes();
+    if (minutsPlusZero < 10) {
+      return `0` + minutsPlusZero;
+    } else {
+      return minutsPlusZero;
+    }
   }
-}
-let minutes = displayMinutes();
-function displayHours() {
-  let HoursPlusZero = time.getHours();
-  if (HoursPlusZero < 10) {
-    return `0` + HoursPlusZero;
-  } else {
-    return HoursPlusZero;
+  let minutes = displayMinutes();
+  function displayHours() {
+    let HoursPlusZero = time.getHours();
+    if (HoursPlusZero < 10) {
+      return `0` + HoursPlusZero;
+    } else {
+      return HoursPlusZero;
+    }
   }
+  let hours = displayHours();
+  return `${day} ${hours}:${minutes}`;
 }
-let hours = displayHours();
-document.querySelector("#day-hour").innerHTML = `${day} ${hours}:${minutes}`;
-
 function showCityTemp(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
@@ -47,14 +49,15 @@ function showCityTemp(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
+  document.querySelector("#day-hour").innerHTML = getTime(
+    response.data.dt * 1000
+  );
 }
-
 function activateTheCity(city) {
   let apiKey = "33fd04d85cdb641fd1bc55ca0162ba48";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=metric`;
   axios.get(apiUrl).then(showCityTemp);
 }
-
 function changeCity(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -75,5 +78,4 @@ function activateCurrentButton(event) {
 }
 let CurrentButtunTemp = document.querySelector("#current-button");
 CurrentButtunTemp.addEventListener("click", activateCurrentButton);
-
 activateTheCity("tel aviv");
