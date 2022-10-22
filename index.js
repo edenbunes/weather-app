@@ -82,9 +82,13 @@ function displayDegreesFahrenheit() {
   document.querySelector("#number-degrees").innerHTML = Math.round(
     celsius * (9 / 5) + 32
   );
+  degreesFahrenheit.classList.add("active");
+  degreesCelsius.classList.remove("active");
 }
 function displayDegreesCelsius() {
   document.querySelector("#number-degrees").innerHTML = Math.round(celsius);
+  degreesFahrenheit.classList.remove("active");
+  degreesCelsius.classList.add("active");
 }
 let celsius = null;
 let degreesFahrenheit = document.querySelector("#degrees-fahrenheit");

@@ -7,7 +7,7 @@ ul {
 }
 .decorating {
   font-family: "Quicksand", sans-serif;
-  border: 5px solid rgb(46, 47, 48, 0.5);
+  border: 1px solid rgb(46, 47, 48, 0.5);
   border-radius: 5px;
   padding: 20px;
   max-width: 500px;
@@ -36,20 +36,18 @@ ul {
   font-weight: 700;
   color: rgb(66, 65, 65);
   text-transform: capitalize;
-  margin: 50px 0 10px 13px;
+  margin: 50px 0 15px 13px;
 }
-
 .icon-description {
   text-align: center;
   border: 0 solid;
   border-radius: 90px;
-  background-color: rgb(5, 160, 160, 0.3);
+  background-color: rgb(219, 216, 227, 0.6);
 }
-
 .temp {
   text-align: center;
 }
-.degrees-plus-farenheit {
+.units {
   position: relative;
   bottom: 27px;
 }
@@ -70,12 +68,9 @@ ul {
   font-size: 17px;
   text-align: center;
 }
-
-.degrees-celsius {
+.active {
   text-decoration: none;
-}
-.degrees-fahrenheit {
-  text-decoration: none;
+  color: rgb(66, 65, 65);
 }
 .another-condition {
   padding-bottom: 22px;
@@ -90,6 +85,7 @@ ul {
 .temp-by-days {
   font-size: 30px;
   padding: 12px 12px;
+  margin-top: 33px;
   font-weight: 500;
   color: rgb(66, 65, 65);
 }
