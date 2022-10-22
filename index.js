@@ -62,8 +62,6 @@ function changeCity(event) {
   let city = document.querySelector("#city-input").value;
   activateTheCity(city);
 }
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", changeCity);
 function activateCurrentButton(event) {
   event.preventDefault();
   function getPosition(position) {
@@ -75,9 +73,6 @@ function activateCurrentButton(event) {
   }
   navigator.geolocation.getCurrentPosition(getPosition);
 }
-let CurrentButtunTemp = document.querySelector("#current-button");
-CurrentButtunTemp.addEventListener("click", activateCurrentButton);
-
 function displayDegreesFahrenheit() {
   document.querySelector("#number-degrees").innerHTML = Math.round(
     celsius * (9 / 5) + 32
@@ -90,6 +85,10 @@ function displayDegreesCelsius() {
   degreesFahrenheit.classList.remove("active");
   degreesCelsius.classList.add("active");
 }
+let CurrentButtunTemp = document.querySelector("#current-button");
+CurrentButtunTemp.addEventListener("click", activateCurrentButton);
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", changeCity);
 let celsius = null;
 let degreesFahrenheit = document.querySelector("#degrees-fahrenheit");
 degreesFahrenheit.addEventListener("click", displayDegreesFahrenheit);
