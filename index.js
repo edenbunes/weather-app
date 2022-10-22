@@ -31,7 +31,6 @@ function getTime(timestamp) {
   document.querySelector("#day-hour").innerHTML = `${day} ${hours}:${minutes}`;
 }
 function showCityTemp(response) {
-  console.log(response.data);
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -51,6 +50,7 @@ function showCityTemp(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   getTime(response.data.dt * 1000);
+  celsius = response.data.main.temp;
 }
 function activateTheCity(city) {
   let apiKey = "33fd04d85cdb641fd1bc55ca0162ba48";
@@ -77,4 +77,18 @@ function activateCurrentButton(event) {
 }
 let CurrentButtunTemp = document.querySelector("#current-button");
 CurrentButtunTemp.addEventListener("click", activateCurrentButton);
+
+function displayDegreesFahrenheit() {
+  document.querySelector("#number-degrees").innerHTML = Math.round(
+    celsius * (9 / 5) + 32
+  );
+}
+function displayDegreesCelsius() {
+  document.querySelector("#number-degrees").innerHTML = Math.round(celsius);
+}
+let celsius = null;
+let degreesFahrenheit = document.querySelector("#degrees-fahrenheit");
+degreesFahrenheit.addEventListener("click", displayDegreesFahrenheit);
+let degreesCelsius = document.querySelector("#degrees-celsius");
+degreesCelsius.addEventListener("click", displayDegreesCelsius);
 activateTheCity("tel aviv");
