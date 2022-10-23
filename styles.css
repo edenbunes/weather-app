@@ -19,11 +19,7 @@ ul {
   background: none;
 }
 .submiting {
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  font-weight: bold;
-  color: #6d7074;
-  padding: 6px;
+  margin: 0px 0px 0px -11px;
 }
 .current-button {
   border: 3px solid #aeb2b0;
@@ -65,7 +61,7 @@ ul {
   line-height: 15px;
 }
 .description {
-  font-size: 17px;
+  font-size: 18px;
   text-align: center;
 }
 .active {
@@ -75,7 +71,7 @@ ul {
 .another-condition {
   padding-bottom: 22px;
   padding-left: 10px;
-  margin: -30px 0px 29px 6px;
+  margin: -22px 0px 0px 6px;
   font-size: 17px;
   line-height: 25px;
 }
