@@ -31,7 +31,6 @@ function getTime(timestamp) {
   document.querySelector("#day-hour").innerHTML = `${day} ${hours}:${minutes}`;
 }
 function showCityTemp(response) {
-  console.log(response.data.weather[0].icon);
   let iconResponse = response.data.weather[0].icon;
   let background = document.querySelector("#container");
   if (iconResponse.includes("n")) {
