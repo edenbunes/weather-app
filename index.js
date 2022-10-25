@@ -31,6 +31,16 @@ function getTime(timestamp) {
   document.querySelector("#day-hour").innerHTML = `${day} ${hours}:${minutes}`;
 }
 function showCityTemp(response) {
+  console.log(response.data.weather[0].icon);
+  let iconResponse = response.data.weather[0].icon;
+  let background = document.querySelector("#container");
+  if (iconResponse.includes("n")) {
+    background.classList.add("a");
+    background.classList.remove("b");
+  } else if (iconResponse.includes("d")) {
+    background.classList.add("b");
+    background.classList.remove("a");
+  }
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -94,4 +104,5 @@ let degreesFahrenheit = document.querySelector("#degrees-fahrenheit");
 degreesFahrenheit.addEventListener("click", displayDegreesFahrenheit);
 let degreesCelsius = document.querySelector("#degrees-celsius");
 degreesCelsius.addEventListener("click", displayDegreesCelsius);
+
 activateTheCity("tel aviv");
