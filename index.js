@@ -95,6 +95,26 @@ function displayDegreesCelsius() {
   degreesFahrenheit.classList.remove("active");
   degreesCelsius.classList.add("active");
 }
+
+function displayDailyForecast() {
+  let dailyForecastElement = document.querySelector("#daily-forecast");
+  let dailyForecastHtml = `<div class="row">`;
+  let days = ["sun", "mon", "tue", "wed", "thu"];
+  days.forEach(function (day) {
+    dailyForecastHtml =
+      dailyForecastHtml +
+      `<div class="col-2">
+              <div class="day">${day}</div>
+              <i class="fa-solid fa-sun"></i>
+              <div class="temperature-max-min">
+                <span class="temp-max">30°</span
+                ><span class="temp-min">24°</span>
+              </div></div>`;
+  });
+  dailyForecastHtml = dailyForecastHtml + `</div>`;
+  dailyForecastElement.innerHTML = dailyForecastHtml;
+}
+
 let CurrentButtunTemp = document.querySelector("#current-button");
 CurrentButtunTemp.addEventListener("click", activateCurrentButton);
 let searchForm = document.querySelector("#search-form");
@@ -104,5 +124,5 @@ let degreesFahrenheit = document.querySelector("#degrees-fahrenheit");
 degreesFahrenheit.addEventListener("click", displayDegreesFahrenheit);
 let degreesCelsius = document.querySelector("#degrees-celsius");
 degreesCelsius.addEventListener("click", displayDegreesCelsius);
-
+displayDailyForecast();
 activateTheCity("tel aviv");
