@@ -30,8 +30,32 @@ function getTime(timestamp) {
   let hours = displayHours();
   document.querySelector("#day-hour").innerHTML = `${day} ${hours}:${minutes}`;
 }
+function displayDailyForecast(response) {
+  console.log(response.data);
+  let dailyForecastElement = document.querySelector("#daily-forecast");
+  let dailyForecastHtml = `<div class="row">`;
+  let days = ["sun", "mon", "tue", "wed", "thu"];
+  days.forEach(function (day) {
+    dailyForecastHtml =
+      dailyForecastHtml +
+      `<div class="col-2">
+              <div class="day">${day}</div>
+              <i class="fa-solid fa-sun"></i>
+              <div class="temperature-max-min">
+                <span class="temp-max">30°</span
+                ><span class="temp-min">24°</span>
+              </div></div>`;
+  });
+  dailyForecastHtml = dailyForecastHtml + `</div>`;
+  dailyForecastElement.innerHTML = dailyForecastHtml;
+}
+function getCoordinates(Coordinates) {
+  console.log(Coordinates);
+  let apiKey = "88724523008dc9e1be18f6eb6a959b67";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${Coordinates.lat}&lon=${Coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayDailyForecast);
+}
 function showCityTemp(response) {
-  console.log(response.data.weather[0].icon);
   let iconResponse = response.data.weather[0].icon;
   let background = document.querySelector("#container");
   if (iconResponse.includes("n")) {
@@ -61,7 +85,9 @@ function showCityTemp(response) {
     response.data.weather[0].description;
   getTime(response.data.dt * 1000);
   celsius = response.data.main.temp;
+  getCoordinates(response.data.coord);
 }
+
 function activateTheCity(city) {
   let apiKey = "33fd04d85cdb641fd1bc55ca0162ba48";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=metric`;
@@ -96,25 +122,6 @@ function displayDegreesCelsius() {
   degreesCelsius.classList.add("active");
 }
 
-function displayDailyForecast() {
-  let dailyForecastElement = document.querySelector("#daily-forecast");
-  let dailyForecastHtml = `<div class="row">`;
-  let days = ["sun", "mon", "tue", "wed", "thu"];
-  days.forEach(function (day) {
-    dailyForecastHtml =
-      dailyForecastHtml +
-      `<div class="col-2">
-              <div class="day">${day}</div>
-              <i class="fa-solid fa-sun"></i>
-              <div class="temperature-max-min">
-                <span class="temp-max">30°</span
-                ><span class="temp-min">24°</span>
-              </div></div>`;
-  });
-  dailyForecastHtml = dailyForecastHtml + `</div>`;
-  dailyForecastElement.innerHTML = dailyForecastHtml;
-}
-
 let CurrentButtunTemp = document.querySelector("#current-button");
 CurrentButtunTemp.addEventListener("click", activateCurrentButton);
 let searchForm = document.querySelector("#search-form");
@@ -124,5 +131,4 @@ let degreesFahrenheit = document.querySelector("#degrees-fahrenheit");
 degreesFahrenheit.addEventListener("click", displayDegreesFahrenheit);
 let degreesCelsius = document.querySelector("#degrees-celsius");
 degreesCelsius.addEventListener("click", displayDegreesCelsius);
-displayDailyForecast();
 activateTheCity("tel aviv");
