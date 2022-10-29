@@ -30,28 +30,38 @@ function getTime(timestamp) {
   let hours = displayHours();
   document.querySelector("#day-hour").innerHTML = `${day} ${hours}:${minutes}`;
 }
+function showTheDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = days[date.getDay()];
+  return day;
+}
 function displayDailyForecast(response) {
-  console.log(response.data);
   let dailyForecastElement = document.querySelector("#daily-forecast");
   let dailyForecastHtml = `<div class="row">`;
-  let days = ["sun", "mon", "tue", "wed", "thu"];
-  days.forEach(function (day) {
-    dailyForecastHtml =
-      dailyForecastHtml +
-      `<div class="col-2">
-              <div class="day">${day}</div>
-              <i class="fa-solid fa-sun"></i>
+  let dailyForecastObjects = response.data.daily;
+  dailyForecastObjects.forEach(function (dayObject, index) {
+    if (index < 6) {
+      dailyForecastHtml =
+        dailyForecastHtml +
+        `<div class="col-2">
+              <div class="day">${showTheDay(dayObject.dt)}</div>
+            <img src=" http://openweathermap.org/img/wn/${
+              dayObject.weather[0].icon
+            }@2x.png" alt="Daily forecast image description">
               <div class="temperature-max-min">
-                <span class="temp-max">30°</span
-                ><span class="temp-min">24°</span>
+                <span class="temp-max">${Math.round(dayObject.temp.max)}° </span
+                ><span class="temp-min">${Math.round(
+                  dayObject.temp.min
+                )}°</span>
               </div></div>`;
+    }
   });
   dailyForecastHtml = dailyForecastHtml + `</div>`;
   dailyForecastElement.innerHTML = dailyForecastHtml;
 }
 function getCoordinates(Coordinates) {
-  console.log(Coordinates);
-  let apiKey = "88724523008dc9e1be18f6eb6a959b67";
+  let apiKey = "53f3bc1f5d348c44be3e3754c7185573";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${Coordinates.lat}&lon=${Coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayDailyForecast);
 }
