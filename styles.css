@@ -4,8 +4,8 @@
   padding-top: 20px;
 }
 .b {
-  background-color: yellow;
-  background-size: 400px;
+  background-image: url("day1.jpg");
+  background-size: 1319px;
   padding-top: 20px;
 }
 img {
@@ -21,8 +21,8 @@ ul {
   border-radius: 5px;
   padding: 20px;
   max-width: 500px;
-  margin: auto;
-  background-color: #ffffff;
+  margin: 20px auto;
+  background-color: rgb(255, 255, 255, 0.5);
 }
 .city-input {
   border-radius: 5px;
@@ -114,4 +114,7 @@ ul {
 }
 .github-link {
   color: #ffffff;
+}
+.daily-forecast {
+  margin-top: 50px;
 }

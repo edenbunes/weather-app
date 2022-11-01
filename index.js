@@ -131,7 +131,6 @@ function displayDegreesCelsius() {
   degreesFahrenheit.classList.remove("active");
   degreesCelsius.classList.add("active");
 }
-
 let CurrentButtunTemp = document.querySelector("#current-button");
 CurrentButtunTemp.addEventListener("click", activateCurrentButton);
 let searchForm = document.querySelector("#search-form");
