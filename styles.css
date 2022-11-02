@@ -75,10 +75,7 @@ ul {
   font-size: 18px;
   text-align: center;
 }
-.active {
-  text-decoration: none;
-  color: rgb(66, 65, 65);
-}
+
 .another-condition {
   padding-bottom: 22px;
   padding-left: 10px;

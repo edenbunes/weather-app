@@ -119,25 +119,11 @@ function activateCurrentButton(event) {
   }
   navigator.geolocation.getCurrentPosition(getPosition);
 }
-function displayDegreesFahrenheit() {
-  document.querySelector("#number-degrees").innerHTML = Math.round(
-    celsius * (9 / 5) + 32
-  );
-  degreesFahrenheit.classList.add("active");
-  degreesCelsius.classList.remove("active");
-}
-function displayDegreesCelsius() {
-  document.querySelector("#number-degrees").innerHTML = Math.round(celsius);
-  degreesFahrenheit.classList.remove("active");
-  degreesCelsius.classList.add("active");
-}
+
 let CurrentButtunTemp = document.querySelector("#current-button");
 CurrentButtunTemp.addEventListener("click", activateCurrentButton);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", changeCity);
 let celsius = null;
-let degreesFahrenheit = document.querySelector("#degrees-fahrenheit");
-degreesFahrenheit.addEventListener("click", displayDegreesFahrenheit);
-let degreesCelsius = document.querySelector("#degrees-celsius");
-degreesCelsius.addEventListener("click", displayDegreesCelsius);
+
 activateTheCity("tel aviv");
