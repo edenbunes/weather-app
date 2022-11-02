@@ -50,8 +50,8 @@ function displayDailyForecast(response) {
               dayObject.weather[0].icon
             }@2x.png" alt="Daily forecast image description">
               <div class="temperature-max-min">
+              <span class="temp-min">${Math.round(dayObject.temp.min)}°</span>
                 <span class="temp-max">${Math.round(dayObject.temp.max)}°</span>
-                <span class="temp-min">${Math.round(dayObject.temp.min)}°</span>
               </div></div>`;
     }
   });
