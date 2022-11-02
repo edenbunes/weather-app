@@ -1,10 +1,10 @@
 .a {
-  background-image: url("night.jpg");
+  background-image: url("images/night.jpg");
   background-size: 400px;
   padding-top: 20px;
 }
 .b {
-  background-image: url("day.jpg");
+  background-image: url("images/day.jpg");
   background-size: 1319px;
   padding-top: 20px;
 }
@@ -17,7 +17,6 @@ ul {
 }
 .decorating {
   font-family: "Quicksand", sans-serif;
-
   border-radius: 20px;
   padding: 20px;
   max-width: 500px;
