@@ -5,6 +5,9 @@ img.main-icon {
 ul {
   list-style-type: none;
 }
+.container {
+  margin-top: 25px;
+}
 .a {
   background-image: url("images/night.jpg");
   background-size: 400px;
@@ -45,7 +48,6 @@ ul {
   font-size: 50px;
   font-weight: 700;
   color: rgb(66, 65, 65);
-  text-transform: capitalize;
   margin: 50px 0 15px 13px;
 }
 .icon-description {
@@ -56,7 +58,6 @@ ul {
 }
 .description {
   font-size: 18px;
-  text-align: center;
   padding-bottom: 15px;
   font-weight: 500;
 }

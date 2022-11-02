@@ -95,7 +95,6 @@ function showCityTemp(response) {
   celsius = response.data.main.temp;
   getCoordinates(response.data.coord);
 }
-
 function activateTheCity(city) {
   let apiKey = "33fd04d85cdb641fd1bc55ca0162ba48";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&&units=metric`;
