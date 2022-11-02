@@ -1,3 +1,10 @@
+img.main-icon {
+  margin: 10px auto -6px auto;
+  width: 60%;
+}
+ul {
+  list-style-type: none;
+}
 .a {
   background-image: url("images/night.jpg");
   background-size: 400px;
@@ -7,13 +14,6 @@
   background-image: url("images/day.jpg");
   background-size: 1319px;
   padding-top: 20px;
-}
-img.main-icon {
-  margin: 10px auto -6px auto;
-  width: 60%;
-}
-ul {
-  list-style-type: none;
 }
 .decorating {
   font-family: "Quicksand", sans-serif;
@@ -34,6 +34,13 @@ ul {
 .btn.btn-secondary {
   padding: 6px 7px 6px 0px;
 }
+.time {
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(66, 65, 65);
+  margin: 5px 230px 0px 4px;
+  line-height: 15px;
+}
 .city-name {
   font-size: 50px;
   font-weight: 700;
@@ -45,22 +52,7 @@ ul {
   text-align: center;
   border-radius: 90px;
   background-color: hsla(218, 31%, 65%, 0.6);
-}
-.temp {
-  text-align: center;
-}
-.number-degrees {
-  font-size: 55px;
-  font-weight: 500;
-  color: rgb(66, 65, 65);
-  line-height: 135px;
-}
-.time {
-  font-size: 15px;
-  font-weight: 400;
-  color: rgb(66, 65, 65);
-  margin: 5px 230px 0px 4px;
-  line-height: 15px;
+  margin-top: 24px;
 }
 .description {
   font-size: 18px;
@@ -68,30 +60,32 @@ ul {
   padding-bottom: 15px;
   font-weight: 500;
 }
-.another-condition {
+.description::first-letter {
+  text-transform: capitalize;
+}
+.temp {
+  text-align: center;
+}
+.temp-celsius {
+  font-size: 30px;
+}
+.number-degrees {
+  font-size: 55px;
+  font-weight: 500;
+  color: rgb(66, 65, 65);
+  line-height: 135px;
+}
+.celsius {
+  position: relative;
+  bottom: 18px;
+  right: 7px;
+}
+.humidity-wind {
   padding-bottom: 22px;
   padding-left: 10px;
   margin: -22px 0px 0px 6px;
   font-size: 17px;
   line-height: 25px;
-}
-.description::first-letter {
-  text-transform: capitalize;
-}
-.temp-by-days {
-  font-size: 30px;
-  padding: 12px 12px;
-  margin-top: 33px;
-  font-weight: 500;
-  color: rgb(66, 65, 65);
-}
-
-.degrees {
-  font-size: 19px;
-}
-
-.github-link {
-  color: #ffffff;
 }
 .daily-forecast {
   text-align: center;
@@ -99,17 +93,14 @@ ul {
   font-size: 20px;
   font-weight: bold;
 }
-.temperature-max-min {
-  font-size: 15px;
-  line-height: 40px;
+.github-link {
+  color: #d536b6;
+  font-weight: bold;
 }
 .temp-icon {
   width: 100%;
 }
-.temp-celsius {
-  font-size: 30px;
-}
-.celsius {
-  position: relative;
-  bottom: 18px;
+.temperature-max-min {
+  font-size: 15px;
+  line-height: 40px;
 }

@@ -45,13 +45,13 @@ function displayDailyForecast(response) {
       dailyForecastHtml =
         dailyForecastHtml +
         `<div class="col-2">
-              <div class="day" >${showTheDay(dayObject.dt)}</div>
+              <div>${showTheDay(dayObject.dt)}</div>
             <img class="temp-icon" src=" http://openweathermap.org/img/wn/${
               dayObject.weather[0].icon
             }@2x.png" alt="Daily forecast image description">
               <div class="temperature-max-min">
-              <span class="temp-min">${Math.round(dayObject.temp.min)}°</span>
-                <span class="temp-max">${Math.round(dayObject.temp.max)}°</span>
+              <span>${Math.round(dayObject.temp.min)}°</span>
+                <span>${Math.round(dayObject.temp.max)}°</span>
               </div></div>`;
     }
   });
@@ -117,11 +117,9 @@ function activateCurrentButton(event) {
   }
   navigator.geolocation.getCurrentPosition(getPosition);
 }
-
 let CurrentButtunTemp = document.querySelector("#current-button");
 CurrentButtunTemp.addEventListener("click", activateCurrentButton);
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", changeCity);
 let celsius = null;
-
 activateTheCity("tel aviv");
