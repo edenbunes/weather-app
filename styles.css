@@ -18,7 +18,7 @@ ul {
 .decorating {
   font-family: "Quicksand", sans-serif;
   border: 1px solid rgb(46, 47, 48, 0.5);
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 20px;
   max-width: 500px;
   margin: 20px auto;
@@ -33,10 +33,16 @@ ul {
   margin: 0px 0px 0px -11px;
 }
 .current-button {
-  border: 3px solid #aeb2b0;
+  border: 3px solid #7a7c7b;
   border-radius: 5px;
   color: #6d7074;
   padding: 4px;
+  font-weight: bolder;
+}
+.current-button:hover {
+  background-color: #3f4144;
+  color: #ffffff;
+  transition: 0.6s;
 }
 .city-name {
   font-size: 50px;
@@ -53,10 +59,6 @@ ul {
 }
 .temp {
   text-align: center;
-}
-.units {
-  position: relative;
-  bottom: 27px;
 }
 .number-degrees {
   font-size: 55px;
@@ -75,7 +77,6 @@ ul {
   font-size: 18px;
   text-align: center;
 }
-
 .another-condition {
   padding-bottom: 22px;
   padding-left: 10px;
@@ -113,4 +114,11 @@ ul {
 }
 .temp-icon {
   width: 100%;
+}
+.temp-celsius {
+  font-size: 30px;
+}
+.celsius {
+  position: relative;
+  bottom: 18px;
 }
