@@ -96,25 +96,24 @@ ul {
   font-weight: 500;
   color: rgb(66, 65, 65);
 }
-.sun-icon {
-  font-size: 50px;
-  padding: 25px 0px;
-  color: orange;
-}
+
 .degrees {
   font-size: 19px;
 }
-.sun-icon-need {
-  font-size: 50px;
-  padding: 25px 0px;
-  color: orange;
-  position: relative;
-  bottom: 0px;
-  right: -8px;
-}
+
 .github-link {
   color: #ffffff;
 }
 .daily-forecast {
-  margin-top: 50px;
+  text-align: center;
+  margin-top: 45px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.temperature-max-min {
+  font-size: 15px;
+  line-height: 40px;
+}
+.temp-icon {
+  width: 100%;
 }
