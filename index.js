@@ -45,8 +45,8 @@ function displayDailyForecast(response) {
       dailyForecastHtml =
         dailyForecastHtml +
         `<div class="col-2">
-              <div class="day">${showTheDay(dayObject.dt)}</div>
-            <img src=" http://openweathermap.org/img/wn/${
+              <div class="day" >${showTheDay(dayObject.dt)}</div>
+            <img class="temp-icon" src=" http://openweathermap.org/img/wn/${
               dayObject.weather[0].icon
             }@2x.png" alt="Daily forecast image description">
               <div class="temperature-max-min">
