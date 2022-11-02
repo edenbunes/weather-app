@@ -8,7 +8,7 @@
   background-size: 1319px;
   padding-top: 20px;
 }
-img {
+img.main-icon {
   margin: 10px auto -6px auto;
   width: 60%;
 }
@@ -17,7 +17,7 @@ ul {
 }
 .decorating {
   font-family: "Quicksand", sans-serif;
-  border: 1px solid rgb(46, 47, 48, 0.5);
+
   border-radius: 20px;
   padding: 20px;
   max-width: 500px;
@@ -32,17 +32,8 @@ ul {
 .submiting {
   margin: 0px 0px 0px -11px;
 }
-.current-button {
-  border: 3px solid #7a7c7b;
-  border-radius: 5px;
-  color: #6d7074;
-  padding: 4px;
-  font-weight: bolder;
-}
-.current-button:hover {
-  background-color: #3f4144;
-  color: #ffffff;
-  transition: 0.6s;
+.btn.btn-secondary {
+  padding: 6px 7px 6px 0px;
 }
 .city-name {
   font-size: 50px;
@@ -53,9 +44,8 @@ ul {
 }
 .icon-description {
   text-align: center;
-  border: 0 solid;
   border-radius: 90px;
-  background-color: rgb(219, 216, 227, 0.6);
+  background-color: hsla(218, 31%, 65%, 0.6);
 }
 .temp {
   text-align: center;
@@ -76,6 +66,8 @@ ul {
 .description {
   font-size: 18px;
   text-align: center;
+  padding-bottom: 15px;
+  font-weight: 500;
 }
 .another-condition {
   padding-bottom: 22px;
