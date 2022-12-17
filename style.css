@@ -26,14 +26,6 @@ ul {
   margin: 20px auto;
   background-color: rgb(255, 255, 255, 0.5);
 }
-.city-input {
-  border-radius: 5px;
-  border: 1px solid #ced4da;
-  background: none;
-}
-.submiting {
-  margin: 0px 0px 0px -11px;
-}
 .btn.btn-secondary {
   padding: 6px 7px 6px 0px;
 }
